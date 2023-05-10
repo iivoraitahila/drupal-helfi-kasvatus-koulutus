@@ -17,4 +17,4 @@ RUN chmod +x /crons/*
 # Copy nginx overrides.
 COPY docker/openshift/custom.locations /etc/nginx/conf.d/custom.locations
 
-RUN curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh | bash && sudo /usr/local/bin/newrelic install -n php-agent-installer
+RUN curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh | bash && /usr/local/bin/newrelic install -n php-agent-installer
